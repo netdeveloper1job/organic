@@ -325,14 +325,15 @@ iframe {
   transition:all 0.3s ease-in-out;	
   width: 170px;
   height: 236px;
-background: #FCF8EE;
-border: 4px solid #FFFFFF;
-box-sizing: border-box;
-box-shadow: 0px 24px 48px rgba(0, 50, 56, 0.160949);
-border-radius: 16px;
-margin:40px 20px;
+  background: #FCF8EE;
+  border: 4px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 24px 48px rgba(0, 50, 56, 0.160949);
+  border-radius: 16px;
+  margin:40px 10px;
 }
-#product .owl-item:hover .home-product{
+ #product .owl-item:hover .home-product{
+
 	opacity:1;
   transform: scale3d(1.2, 1.2, 1);
   cursor: pointer;
