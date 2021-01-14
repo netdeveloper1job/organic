@@ -1,0 +1,217 @@
+body{
+	@media only screen and (max-width: 1023px) {
+		font-size: 15px;
+		line-height: 24px;
+	}
+}
+
+h1{
+	@media only screen and (max-width: 1023px) {
+		font-size: 34px;
+		margin: 0 0 15px;
+	}
+}
+
+h2{
+	@media only screen and (max-width: 1023px) {
+		font-size: 26px;
+		margin: 0 0 15px;
+	}
+
+	@media only screen and (max-width: 767px) {
+		font-size: 20px;
+	}
+}
+
+h3{
+	@media only screen and (max-width: 767px) {
+		font-size: 20px;
+	}
+}
+
+// wrapper
+#wrapper{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+}
+
+// container
+.container-fluid{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+// ul list reset
+ul{
+	@extend %listreset;
+}
+
+// content style
+.content-block{
+	ul{
+		margin: 0 0 15px;
+
+		li{
+			position: relative;
+			padding: 0 0 0 20px;
+
+			&:before{
+				content: '\f101';
+				font-family: 'fontawesome';
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all 0.3s linear;
+				-webkit-transition: all 0.3s linear;
+			}
+
+			a{
+				color: $black;
+
+				&:hover{
+					color: $red;
+				}
+			}
+		}
+	}
+}
+
+// buttons
+.btn{
+	&.btn-primary{
+		  
+
+
+		@media only screen and (max-width: 1023px) {
+			padding: 9px 35px;
+		}
+
+		&:focus,
+		&:hover{
+			background: $white;
+			border-color: $red;
+			color: $red;
+		}
+
+		.fas{
+			margin: 0 0 0 6px;
+			font-size: 15px;
+		}
+	}
+}
+
+
+// title block
+.title-holder{
+	text-align: center;
+	margin: 0 0 40px;
+
+	@media only screen and (max-width: 767px) {
+		margin: 0 0 20px;
+	}
+
+	h2{
+		margin: 0 0 5px;
+		text-transform: uppercase;
+	}
+
+	.subtitle{
+		color: lighten($black, 40%);
+
+		&:before{
+			content: '-';
+			margin: 0 5px 0 0;
+		}
+
+		&:after{
+			content: '-';
+			margin: 0 0 0 5px;
+		}
+	}
+}
+
+// social media
+.socials{
+	display: table;
+	height: 100%;
+	width: 100%;
+
+	ul{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	li{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 5px;
+	}
+
+	a{
+		@include size(35px);
+		background: $white;
+		color: $red;
+		border-radius: 50%;
+		display: block;
+		text-align: center;
+		padding: 2px;
+		transition: background 0.3s linear, color 0.3s linear;
+		-webkit-transition: background 0.3s linear, color 0.3s linear;
+
+		&:hover{
+			background: $red;
+			color: $white;
+		}
+	}
+
+	.fab{
+		line-height: 2;
+	}
+}
+
+// go top
+.go-top{
+	@include size(50px);
+	@include hide-text;
+	transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: $red;
+	border-radius: 3px;
+	color: $white;
+	display: none;
+
+	@media only screen and (max-width: 767px) {
+		@include size(40px);
+	}
+
+	&:before{
+		@include size(13px);
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		content: '';
+		border-style: solid;
+		border-color: $white;
+		border-width: 1px 1px 0 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -3px 0 0 -6px;
+
+		@media only screen and (max-width: 767px) {
+			@include size(11px);
+		}
+	}
+
+	&:hover{
+		background: darken($red, 10%);
+	}
+}
+button:focus {
+    outline: 1px dotted;
+    outline: 0;
+}
